@@ -44,22 +44,6 @@ android {
             }
         }
     }
-    signingConfigs {
-        create("release") {
-            storeFile = rootProject.file(properties.getProperty("storeFile"))
-            storePassword = properties.getProperty("storePassword")
-            keyAlias = properties.getProperty("keyAlias")
-            keyPassword = properties.getProperty("keyPassword")
-        }
-    }
-    buildTypes {
-        getByName("release") {
-            isDebuggable = true
-            isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-            signingConfig=signingConfigs.getByName("release")
-        }
-    }
 
     flavorDimensions("appstore")
     productFlavors {
