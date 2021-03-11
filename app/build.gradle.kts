@@ -47,13 +47,7 @@ android {
 
     flavorDimensions("appstore")
     productFlavors {
-        create("generic") {
-            dimension("appstore")
-        }
         create("google") {
-            dimension("appstore")
-        }
-        create("amazon") {
             dimension("appstore")
         }
     }
