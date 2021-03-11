@@ -18,9 +18,9 @@ jobs:
         cd $GITHUB_WORKSPACE
         git submodule update --init
         chmod +x ./gradlew
-        ./gradlew assembleDebug
+        ./gradlew assembleDebug --stacktrace
     - name: Upload apk
       uses: actions/upload-artifact@v2
       with:
         name: apk
-        path: bin/*.apk
+        path: app/build/outputs/apk/debug/*.apk 
